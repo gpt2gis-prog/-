@@ -105,12 +105,15 @@
           <h2>Отправьте задачу — подготовим предложение</h2>
           <p>Укажите, что требуется, примерное количество и регион поставки. Контактные данные и обработчик формы можно подключить после выбора домена и способа получения заявок.</p>
         </div>
-        <form class="request-form" id="request-form">
+        <form class="request-form" id="request-form" data-personal-data-form>
           <label>Компания<input name="company" autocomplete="organization" placeholder="Название организации"></label>
           <label>Контактное лицо<input name="name" autocomplete="name" placeholder="Как к вам обращаться" required></label>
           <label>Телефон или e-mail<input name="contact" placeholder="Контакт для связи" required></label>
           <label>Что требуется<textarea name="message" rows="5" placeholder="Перечень, характеристики, количество, регион поставки" required></textarea></label>
-          <label class="consent"><input type="checkbox" required> <span>Согласен на обработку данных для ответа на заявку</span></label>
+          <label class="consent">
+            <input type="checkbox" name="personal_data_consent" required aria-required="true">
+            <span>Я даю согласие на <a href="consent.html" target="_blank" rel="noopener">обработку персональных данных</a> и подтверждаю, что ознакомился с <a href="privacy.html" target="_blank" rel="noopener">Политикой обработки персональных данных</a>.</span>
+          </label>
           <button class="button primary" type="submit">Отправить заявку</button>
           <p class="form-note" id="form-note" aria-live="polite"></p>
         </form>
@@ -121,6 +124,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div><strong>Альтерна-Амур</strong><p>Комплексное снабжение организаций.</p></div>
+      <div><a href="privacy.html">Политика обработки персональных данных</a> · <a href="consent.html">Согласие на обработку персональных данных</a></div>
       <a href="#top">Наверх ↑</a>
     </div>
   </footer>
